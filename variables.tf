@@ -108,3 +108,7 @@ variable "launch_type" {
   default     = "EC2"
   description = "The launch type for the task. We assume EC2 by default."
 }
+
+variable "task_role_arn" {
+  description = "The arn of the role to associate with your ecs service."
+}
