@@ -26,5 +26,5 @@ resource "aws_ecs_service" "main_service" {
     target_group_arn = "${aws_lb_target_group.lb_targets.arn}"
   }
 
-  depends_on = ["aws_lb.app_lb"]
+  depends_on = [aws_lb.app_lb]
 }
