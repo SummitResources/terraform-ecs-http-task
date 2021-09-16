@@ -3,6 +3,7 @@ resource "aws_lb" "app_lb" {
   load_balancer_type = "application"
   subnets            = "${var.lb_public_subnets}"
   security_groups    = ["${var.cluster_lb_sg_id}"]
+  idle_timeout       = "600"
 }
 
 resource "aws_lb_listener" "secure_listener" {
