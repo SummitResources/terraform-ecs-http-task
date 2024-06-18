@@ -41,7 +41,7 @@ resource "aws_lb_target_group" "lb_targets" {
   protocol             = "HTTP"
   vpc_id               = "${var.vpc_id}"
   target_type          = "instance"
-  deregistration_delay = "60"
+  deregistration_delay = "15"
 
   health_check {
     interval            = "${var.health_check_interval}"
